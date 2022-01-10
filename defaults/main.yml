@@ -1,7 +1,11 @@
 ---
 # Edition can be one of: 'ce' (Community Edition) or 'ee' (Enterprise Edition).
 docker_edition: 'ce'
-docker_package: "docker-{{ docker_edition }}"
+docker_version: "5:20.10.1~3-0~ubuntu-focal"
+docker_package:
+  - "docker-{{ docker_edition }}={{ docker_version }}"
+  - "docker-{{ docker_edition }}-cli={{ docker_version }}"
+  - "docker-{{ docker_edition }}-rootless-extras={{ docker_version }}"
 docker_package_state: present
 
 # Service options.
