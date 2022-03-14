@@ -39,4 +39,9 @@ docker_yum_gpg_key: "{{ docker_repo_url }}/centos/gpg"
 docker_users: []
 
 # Docker daemon options as a dict
-docker_daemon_options: {}
+docker_daemon_options: {
+  "default-address-pools":
+  [
+    {"base":"192.168.0.0/16","size":24}
+  ]
+}
