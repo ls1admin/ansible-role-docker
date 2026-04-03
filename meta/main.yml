@@ -7,12 +7,8 @@ galaxy_info:
   description: Docker for Linux.
   company: "Midwestern Mac, LLC"
   license: "license (BSD, MIT)"
-  min_ansible_version: 2.4
+  min_ansible_version: 2.15.1
   platforms:
-    - name: EL
-      versions:
-        - 7
-        - 8
     - name: Fedora
       versions:
         - all
@@ -20,15 +16,24 @@ galaxy_info:
       versions:
         - buster
         - bullseye
+        - bookworm
+        - trixie
     - name: Ubuntu
       versions:
         - bionic
         - focal
         - jammy
+        - noble
     - name: Alpine
       version:
         - all
     - name: ArchLinux
+      versions:
+        - all
+    - name: SLES
+      versions:
+        - all
+    - name: openSUSE
       versions:
         - all
   galaxy_tags:
